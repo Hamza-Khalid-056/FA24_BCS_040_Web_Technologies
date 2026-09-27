@@ -1,0 +1,17 @@
+
+/* header{
+    color:green;
+    display:flex;
+    justify-content: center;
+} */
+ h1{
+    text-align: center;
+ }
+ .details{
+    text-align: center;
+ }
+ .heading{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+ }
