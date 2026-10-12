@@ -1,0 +1,13 @@
+.navbar-sections {
+    display: flex;
+    flex-direction: row;
+}
+.sign-up{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+li{
+    list-style-type: none;
+}
+
