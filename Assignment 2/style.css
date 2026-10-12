@@ -1,13 +1,27 @@
-.navbar-sections {
-    display: flex;
-    flex-direction: row;
+.navbar ul{
+    margin: 0px;
+    padding:0px;
 }
-.sign-up{
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
+.navbar {
+  padding: 4px 10px 10px;
+  background-color: #231e1e;
+  color: #ffffff;
 }
-li{
-    list-style-type: none;
+.sign-up {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 }
+li {
+  list-style-type: none;
+}
+.logo img{
+  
+height: 50px;
+width: auto;
+display: block;
 
+}
+a{
+    text-decoration: none;
+}
