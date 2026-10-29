@@ -1,13 +1,13 @@
-body{
-    max-width: 100%;
+body {
+  max-width: 100%;
 }
-.navbar ul{
-    margin: 0px;
-    padding:0px;
+.navbar ul {
+  margin: 0px;
+  padding: 0px;
 }
 .navbar {
-  width:100%;
-  padding: 4px 10px ;
+  width: 100%;
+  padding: 4px 10px;
   background-color: #231e1e;
   color: #ffffff;
 }
@@ -19,40 +19,38 @@ body{
 li {
   list-style-type: none;
 }
-.logo img{
-  
-height: 50px;
-width: auto;
-display: block;
-
+.logo img {
+  height: 50px;
+  width: auto;
+  display: block;
 }
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
-.sign-up{
-    text-height: 30px;
+.sign-up {
+  text-height: 30px;
 }
-.strong{
-    font-weight: bold;
+.strong {
+  font-weight: bold;
 }
-.text-color{
-  color: #DE1E26;
+.text-color {
+  color: #de1e26;
 }
-.text-details{
+.text-details {
   font-size: 24px;
   padding: 0 20px;
   margin-top: 40px;
-  margin-bottom:40px;
+  margin-bottom: 40px;
   text-align: center;
-  color: #DE1E26;
+  color: #de1e26;
 }
-.margins{
+.margins {
   font-size: 24px;
   padding: 0 20px;
   margin-top: 40px;
-  margin-bottom:40px;
+  margin-bottom: 40px;
   /* text-align: center; */
-  color: #DE1E26;
+  color: #de1e26;
 }
 .site-footer {
   border-top: 1px solid #444;
@@ -105,4 +103,11 @@ a{
   border-top: 2px solid #de1e26;
   opacity: 1;
   margin: 24px 0;
+}
+
+.navbar a {
+  color: white;
+}
+.dec{
+  list-style-type: disc;
 }
