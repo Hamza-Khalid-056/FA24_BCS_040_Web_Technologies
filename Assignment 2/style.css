@@ -108,6 +108,10 @@ a {
 .navbar a {
   color: white;
 }
-.dec{
+.dec {
   list-style-type: disc;
+}
+.color-black {
+  color: #231e1e;
+  font-weight: 700;
 }
