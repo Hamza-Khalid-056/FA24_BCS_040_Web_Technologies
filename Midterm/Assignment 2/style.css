@@ -183,3 +183,55 @@ a {
 #f-wireless-headset:checked ~ .product-section .product-item:not([data-category="wireless-headset"]) {
   display: none;
 }
+
+/* ===== Task 2: product page layout (BP = 640px, sticky top = 70px) ===== */
+
+/* Mobile first (below 640px): one column, stacked image -> details -> description */
+.product-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "image"
+    "details"
+    "description";
+  gap: 1.5rem;
+}
+
+.product-image       { grid-area: image; }
+.product-details     { grid-area: details; }
+.product-description { grid-area: description; }
+
+.product-details {
+  background: #000;
+  border: 1px solid #333;
+  border-top: 3px solid var(--accent);
+  padding: 1.25rem;
+}
+
+.quantity-input {
+  max-width: 120px;
+}
+
+/* 640px and wider: image + details side by side, description full width underneath */
+@media (min-width: 640px) {
+  .product-layout {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "image       details"
+      "description description";
+  }
+
+  /* The image area is made tall enough that the sticky box has room to travel inside it */
+  .product-image {
+    min-height: 140vh;
+  }
+
+  /* Sticky details box: stays 70px below the top of the viewport.
+     align-self: start stops the grid from stretching it to the full row height
+     (a stretched box has no room left to move, so sticky would do nothing). */
+  .product-details {
+    position: sticky;
+    top: 70px;
+    align-self: start;
+  }
+}
