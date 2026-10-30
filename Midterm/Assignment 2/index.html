@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -50,7 +50,7 @@
     </header>
 <main>
   <div class="video-wrapper">
-    <video class="w-100" infinite muted playsinline>
+    <video class="w-100" autoplay infinite muted playsinline>
       <source src="Bloody_Intro_Video.mp4" />
     </video>
   </div>
@@ -62,136 +62,138 @@
   <section class="categories">
     <h1 class="text-color margins">New Gaming Gear</h1>
 
-<div class="product-tab-block bg-black py-3 px-4">
-  <ul class="nav list-product-tabs gap-3 md:gap-5 flex-wrap">
-    <li class="nav-item">
-      <button class="nav-link active" type="button">Mouse</button>
-    </li>
-    <li class="nav-item">
-      <button class="nav-link" type="button">Keyboard</button>
-    </li>
-    <li class="nav-item">
-      <button class="nav-link" type="button">Headphone</button>
-    </li>
-  </ul>
-</div>
+<!-- Task 1: CSS-only category filter (radios must be siblings that come BEFORE the grid) -->
+  <div class="shop">
+    <input type="radio" name="category" id="f-all" class="filter-radio" checked>
+    <input type="radio" name="category" id="f-wireless-mouse" class="filter-radio">
+    <input type="radio" name="category" id="f-dual-mode-mouse" class="filter-radio">
+    <input type="radio" name="category" id="f-wired-headset" class="filter-radio">
+    <input type="radio" name="category" id="f-wireless-headset" class="filter-radio">
 
-<section class="container-fluid px-4">
-  <div class="row row-cols-2 lg:row-cols-4 g-4">
+    <div class="filter-bar" role="group" aria-label="Filter products by category">
+      <label for="f-all">All</label>
+      <label for="f-wireless-mouse">Wireless Mouse</label>
+      <label for="f-dual-mode-mouse">Dual-Mode Mouse</label>
+      <label for="f-wired-headset">Wired Headset</label>
+      <label for="f-wireless-headset">Wireless Headset</label>
+    </div>
+
+    <section class="container-fluid px-4 product-section">
+      <div class="row row-cols-2 lg:row-cols-4 g-4 product-grid">
 
     <!-- Card 1 -->
-    <article class="col">
-      <a href="products.html" target="blank" class="text-decoration-none">
-      <div class="card product-card ">
-        <img src="../Material_For_Website/SG5-wireless-Gaming-mouse.png" class="card-img-top img-fluid" alt="R77 Ultra Dock">
-        <div class="card-body px-0">
-          <h6 class="card-title text-truncate">SG5-wireless-Gaming-mouse</h6>
-          <p class="card-text fw-bold">Rs.8,700.00</p>
+    <article class="col product-item" data-category="wireless-mouse">
+      <a href="products.html" target="_blank" class="text-decoration-none">
+        <div class="card product-card">
+          <img src="../Material_For_Website/SG5-wireless-Gaming-mouse.png" class="card-img-top img-fluid" alt="SG5 Wireless Gaming Mouse">
+          <div class="card-body px-0">
+            <h6 class="card-title text-truncate">SG5-wireless-Gaming-mouse</h6>
+            <p class="card-text fw-bold">Rs.8,700.00</p>
+          </div>
         </div>
-      </div>
-       </a>
+      </a>
     </article>
- 
+
     <!-- Card 2 -->
-    <article class="col">
-      <a href="products.html" target="blank" class="text-decoration-none">
-      <div class="card product-card ">
-        <img src="../Material_For_Website/R77-Ultra-Dock-Dual-Mode-Wireless-Gaming-Mouse.png" class="card-img-top img-fluid" alt="R73 Ultra">
-        <div class="card-body px-0">
-          <h6 class="card-title text-truncate">R77-Ultra-Dock-Dual-Mode-Wireless-Gaming-Mouse</h6>
-          <p class="card-text fw-bold">Rs.7,700.00</p>
+    <article class="col product-item" data-category="dual-mode-mouse">
+      <a href="products.html" target="_blank" class="text-decoration-none">
+        <div class="card product-card">
+          <img src="../Material_For_Website/R77-Ultra-Dock-Dual-Mode-Wireless-Gaming-Mouse.png" class="card-img-top img-fluid" alt="R77 Ultra Dock Dual Mode Wireless Gaming Mouse">
+          <div class="card-body px-0">
+            <h6 class="card-title text-truncate">R77-Ultra-Dock-Dual-Mode-Wireless-Gaming-Mouse</h6>
+            <p class="card-text fw-bold">Rs.7,700.00</p>
+          </div>
         </div>
-      </div>
       </a>
     </article>
 
     <!-- Card 3 -->
-    <article class="col">
-      <a href="products.html" target="blank" class="text-decoration-none">
-      <div class="card product-card ">
-        <img src="../Material_For_Website/R80-Plus-2.4G-Wireless-Gaming-Mouse.png" class="card-img-top img-fluid" alt="R80 Plus">
-        <div class="card-body px-0">
-          <h6 class="card-title text-truncate">R80 Plus 2.4G Wireless Gaming</h6>
-          <p class="card-text fw-bold">Rs.6,500.00</p>
+    <article class="col product-item" data-category="wireless-mouse">
+      <a href="products.html" target="_blank" class="text-decoration-none">
+        <div class="card product-card">
+          <img src="../Material_For_Website/R80-Plus-2.4G-Wireless-Gaming-Mouse.png" class="card-img-top img-fluid" alt="R80 Plus 2.4G Wireless Gaming Mouse">
+          <div class="card-body px-0">
+            <h6 class="card-title text-truncate">R80 Plus 2.4G Wireless Gaming</h6>
+            <p class="card-text fw-bold">Rs.6,500.00</p>
+          </div>
         </div>
-      </div>
       </a>
     </article>
 
     <!-- Card 4 -->
-    <article class="col">
-      <a href="products.html" target="blank" class="text-decoration-none">
-      <div class="card product-card ">
-        <img src="../Material_For_Website/R73-Pro-Dual-Mode-Wireless-Gaming-Mouse.png" class="card-img-top img-fluid" alt="R73 Pro">
-        <div class="card-body px-0">
-          <h6 class="card-title text-truncate">R73 Pro Dual Mode Wireless</h6>
-          <p class="card-text fw-bold">Rs.9,700.00</p>
+    <article class="col product-item" data-category="dual-mode-mouse">
+      <a href="products.html" target="_blank" class="text-decoration-none">
+        <div class="card product-card">
+          <img src="../Material_For_Website/R73-Pro-Dual-Mode-Wireless-Gaming-Mouse.png" class="card-img-top img-fluid" alt="R73 Pro Dual Mode Wireless Gaming Mouse">
+          <div class="card-body px-0">
+            <h6 class="card-title text-truncate">R73 Pro Dual Mode Wireless</h6>
+            <p class="card-text fw-bold">Rs.9,700.00</p>
+          </div>
         </div>
-      </div>
       </a>
     </article>
-  </div>
-</section>
 
-    <section>
-      <h1 class="text-color margins">Bloody punk</h1>
-      <img src="../Material_For_Website/Bloody Punk .png" class="img-fluid 100w" alt="">
-    </section>  
-  <section class="container-fluid px-4">
-  <div class="row row-cols-2 lg:row-cols-4 g-4">
-        <!-- Card 5 -->
-    <article class="col">
-      <a href="products.html" target="blank" class="text-decoration-none">
-      <div class="card product-card ">
-        <img src="../Material_For_Website/G260-Virtual-7.1-Surround-Sound-USB-Gaming-Headset.png" class="card-img-top img-fluid" alt="R77 Ultra Dock">
-        <div class="card-body px-0">
-          <h6 class="card-title text-truncate">SG5-wireless-Gaming-mouse</h6>
-          <p class="card-text fw-bold">Rs.8,700.00</p>
+    <!-- Card 5 -->
+    <article class="col product-item" data-category="wired-headset">
+      <a href="products.html" target="_blank" class="text-decoration-none">
+        <div class="card product-card">
+          <img src="../Material_For_Website/G260-Virtual-7.1-Surround-Sound-USB-Gaming-Headset.png" class="card-img-top img-fluid" alt="G260 Virtual 7.1 Surround Sound USB Gaming Headset">
+          <div class="card-body px-0">
+            <h6 class="card-title text-truncate">G260 7.1 Surround USB Headset</h6>
+            <p class="card-text fw-bold">Rs.8,700.00</p>
+          </div>
         </div>
-      </div>
-       </a>
+      </a>
     </article>
- 
+
     <!-- Card 6 -->
-    <article class="col">
-      <a href="products.html" target="blank" class="text-decoration-none">
-      <div class="card product-card ">
-        <img src="../Material_For_Website/MR720-Naraka-RGB-Gaming-Wireless-Headset.png" class="card-img-top img-fluid" alt="R73 Ultra">
-        <div class="card-body px-0">
-          <h6 class="card-title text-truncate">R77-Ultra-Dock-Dual-Mode-Wireless-Gaming-Mouse</h6>
-          <p class="card-text fw-bold">Rs.7,700.00</p>
+    <article class="col product-item" data-category="wireless-headset">
+      <a href="products.html" target="_blank" class="text-decoration-none">
+        <div class="card product-card">
+          <img src="../Material_For_Website/MR720-Naraka-RGB-Gaming-Wireless-Headset.png" class="card-img-top img-fluid" alt="MR720 Naraka RGB Gaming Wireless Headset">
+          <div class="card-body px-0">
+            <h6 class="card-title text-truncate">MR720 Naraka RGB Wireless Headset</h6>
+            <p class="card-text fw-bold">Rs.7,700.00</p>
+          </div>
         </div>
-      </div>
       </a>
     </article>
 
     <!-- Card 7 -->
-    <article class="col">
-      <a href="products.html" target="blank" class="text-decoration-none">
-      <div class="card product-card ">
-        <img src="../Material_For_Website/R73-Pro-Dual-Mode-Wireless-Gaming-Mouse.png" class="card-img-top img-fluid" alt="R80 Plus">
-        <div class="card-body px-0">
-          <h6 class="card-title text-truncate">R80 Plus 2.4G Wireless Gaming</h6>
-          <p class="card-text fw-bold">Rs.6,500.00</p>
+    <article class="col product-item" data-category="wireless-mouse">
+      <a href="products.html" target="_blank" class="text-decoration-none">
+        <div class="card product-card">
+          <img src="../Material_For_Website/R73-Pro-Dual-Mode-Wireless-Gaming-Mouse.png" class="card-img-top img-fluid" alt="R80 Plus Wireless Gaming Mouse">
+          <div class="card-body px-0">
+            <h6 class="card-title text-truncate">R80 Plus 2.4G Wireless Gaming</h6>
+            <p class="card-text fw-bold">Rs.6,500.00</p>
+          </div>
         </div>
-      </div>
       </a>
     </article>
 
     <!-- Card 8 -->
-    <article class="col">
-      <a href="products.html" target="blank" class="text-decoration-none">
-      <div class="card product-card ">
-        <img src="../Material_For_Website/R73-Pro-Dual-Mode-Wireless-Gaming-Mouse.png" class="card-img-top img-fluid" alt="R73 Pro">
-        <div class="card-body px-0">
-          <h6 class="card-title text-truncate">R73 Pro Dual Mode Wireless</h6>
-          <p class="card-text fw-bold">Rs.9,700.00</p>
+    <article class="col product-item" data-category="dual-mode-mouse">
+      <a href="products.html" target="_blank" class="text-decoration-none">
+        <div class="card product-card">
+          <img src="../Material_For_Website/R73-Pro-Dual-Mode-Wireless-Gaming-Mouse.png" class="card-img-top img-fluid" alt="R73 Pro Dual Mode Wireless Gaming Mouse">
+          <div class="card-body px-0">
+            <h6 class="card-title text-truncate">R73 Pro Dual Mode Wireless</h6>
+            <p class="card-text fw-bold">Rs.9,700.00</p>
+          </div>
         </div>
-      </div>
       </a>
     </article>
-  </section>
+
+      </div>
+    </section>
   </div>
+</section>
+
+<section>
+  <h1 class="text-color margins">Bloody punk</h1>
+  <img src="../Material_For_Website/Bloody Punk .png" class="img-fluid 100w" alt="">
+</section>
 
 </main>
 <hr class="text-color red-line">
@@ -249,5 +251,3 @@
     ></script>
   </body>
 </html>
-
-

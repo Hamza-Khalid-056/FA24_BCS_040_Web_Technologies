@@ -115,3 +115,71 @@ a {
   color: #231e1e;
   font-weight: 700;
 }
+/* ===== Task 1: CSS-only category filter (accent hue H = 280) ===== */
+:root {
+  --accent: hsl(280, 70%, 45%);
+}
+
+/* Radios stay in the DOM (keyboard + screen-reader accessible) but are visually hidden */
+.shop {
+  position: relative;
+}
+.filter-radio {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+}
+
+/* Filter bar */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  background: #000;
+}
+.filter-bar label {
+  cursor: pointer;
+  color: #fff;
+  border: 2px solid #444;
+  border-radius: 999px;
+  padding: 0.4rem 1.1rem;
+  font-size: 0.9rem;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+.filter-bar label:hover {
+  border-color: var(--accent);
+}
+
+/* Selected filter looks selected (accent colour) */
+#f-all:checked ~ .filter-bar label[for="f-all"],
+#f-wireless-mouse:checked ~ .filter-bar label[for="f-wireless-mouse"],
+#f-dual-mode-mouse:checked ~ .filter-bar label[for="f-dual-mode-mouse"],
+#f-wired-headset:checked ~ .filter-bar label[for="f-wired-headset"],
+#f-wireless-headset:checked ~ .filter-bar label[for="f-wireless-headset"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  font-weight: 600;
+}
+
+/* Keyboard focus ring on the label of the focused radio */
+#f-all:focus-visible ~ .filter-bar label[for="f-all"],
+#f-wireless-mouse:focus-visible ~ .filter-bar label[for="f-wireless-mouse"],
+#f-dual-mode-mouse:focus-visible ~ .filter-bar label[for="f-dual-mode-mouse"],
+#f-wired-headset:focus-visible ~ .filter-bar label[for="f-wired-headset"],
+#f-wireless-headset:focus-visible ~ .filter-bar label[for="f-wireless-headset"] {
+  outline: 3px solid #fff;
+  outline-offset: 2px;
+}
+
+/* Filtering: hide every card whose data-category does not match.
+   display:none removes the card from the grid flow, so no empty gaps are left. */
+#f-wireless-mouse:checked ~ .product-section .product-item:not([data-category="wireless-mouse"]),
+#f-dual-mode-mouse:checked ~ .product-section .product-item:not([data-category="dual-mode-mouse"]),
+#f-wired-headset:checked ~ .product-section .product-item:not([data-category="wired-headset"]),
+#f-wireless-headset:checked ~ .product-section .product-item:not([data-category="wireless-headset"]) {
+  display: none;
+}
