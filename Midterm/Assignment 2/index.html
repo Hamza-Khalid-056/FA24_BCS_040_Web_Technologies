@@ -78,6 +78,13 @@
       <label for="f-wireless-headset">Wireless Headset</label>
     </div>
 
+    <!-- Task 3: live search + price sort (behaviour in script.js) -->
+    <div class="tools-bar">
+      <label for="search-input" class="visually-hidden">Search products by name</label>
+      <input type="search" id="search-input" class="search-input" placeholder="Search products by name" autocomplete="off">
+      <button type="button" id="sort-price" class="sort-btn">Sort by price <span id="sort-dir"></span></button>
+    </div>
+
     <section class="container-fluid px-4 product-section">
       <div class="row row-cols-2 lg:row-cols-4 g-4 product-grid">
 
@@ -186,6 +193,7 @@
     </article>
 
       </div>
+      <p id="no-results" class="no-results" hidden>No products found</p>
     </section>
   </div>
 </section>
@@ -249,5 +257,6 @@
       integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL"
       crossorigin="anonymous"
     ></script>
+      <script src="script.js"></script>
   </body>
 </html>
